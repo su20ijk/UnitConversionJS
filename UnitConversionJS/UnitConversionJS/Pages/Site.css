@@ -52,6 +52,19 @@
     border-width: 1px;
     line-height: 32px;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    display: inline;
+}
+.TopNavBar {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
 .darkBlue {
     color: #0844a4;
 }

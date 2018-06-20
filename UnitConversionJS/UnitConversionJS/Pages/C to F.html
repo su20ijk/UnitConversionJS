@@ -5,13 +5,20 @@
         <title>Celsius to Fahrenheit Conersion</title>
         <link rel="stylesheet" type="text/css" href="Site.css" />
     </head>
-<body>
-    <div id="app">
-        <h1 class="header">Celsius to Fahrenheit Converter </h1>
-        <p class="body">Celsius: <input v-model="inputTemp" class="input"/> Fahrenheit: {{outputTemp}}</p>
-        <button v-on:click="convert" class="buttonB">Convert</button>
-    </div>
-</body>
+    <body>
+        <ul class="lightBlue TopNavBar">
+            <li><a href="index.html">Feet to Meters</a></li>
+            <li><a href="C to F.html">Celsius to Fahrenheit</a></li>
+            <li><a href="feetInches.html">Feet to Inches</a></li>
+            <li><a href="base.html">Base to Base</a></li>
+            <li><a href="centimeterToMeter.html">Centimeter to Meter</a></li>
+        </ul>
+        <div id="app">
+            <h1 class="header">Celsius to Fahrenheit Converter </h1>
+            <p class="body">Celsius: <input v-model="inputTemp" class="input" /> Fahrenheit: {{outputTemp}}</p>
+            <button v-on:click="convert" class="buttonB">Convert</button>
+        </div>
+    </body>
 </html>
 <script src="https://unpkg.com/vue"></script>
 <script>

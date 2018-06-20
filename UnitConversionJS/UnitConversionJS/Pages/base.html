@@ -7,19 +7,24 @@
     <title>Number Convertion</title>
 </head>
 <body>
-    <div>
-        <div class="header darkBlue">
-                Base Convertion
-        </div>
+    <ul class="lightBlue TopNavBar">
+        <li><a href="index.html">Feet to Meters</a></li>
+        <li><a href="C to F.html">Celsius to Fahrenheit</a></li>
+        <li><a href="feetInches.html">Feet to Inches</a></li>
+        <li><a href="base.html">Base to Base</a></li>
+        <li><a href="centimeterToMeter.html">Centimeter to Meter</a></li>
+    </ul>
+    <div class="header darkBlue">
+        Base Convertion
     </div>
     <div id="app">
-            <br />
-            <p> Number in base<input v-model="baseStart" /> to base<input v-model="baseEnd" /></p>
-            <p>Your number: </p>
-            <input v-model="numberStart" />
-            <button v-on:click="baseConvertion" class="buttonB medBlue" >Convert</button>
-            <button v-on:click="reset" class="buttonB medBlue">Reset</button>
-            <p><span v-if="seen"> your number will be: {{numberEnd}}</span></p>
+        <br />
+        <p> Number in base<input v-model="baseStart" /> to base<input v-model="baseEnd" /></p>
+        <p>Your number: </p>
+        <input v-model="numberStart" />
+        <button v-on:click="baseConvertion" class="buttonB medBlue">Convert</button>
+        <button v-on:click="reset" class="buttonB medBlue">Reset</button>
+        <p><span v-if="seen"> your number will be: {{numberEnd}}</span></p>
     </div>
 </body>
 </html>

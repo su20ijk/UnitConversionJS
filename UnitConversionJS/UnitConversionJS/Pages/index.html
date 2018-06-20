@@ -9,7 +9,7 @@
         <div id="app">
             <h1 class="header">Feet to Inches</h1>
             <p>Feet:</p>
-            <input v-model="feet" v-on:change ="feetInches"/>
+            <input v-model="feet" class="input" type="number"/>
             <button v-on:click="feetInches" class="buttonB">Convert</button>
             <p>Inches: {{ inches }}</p>
         </div>

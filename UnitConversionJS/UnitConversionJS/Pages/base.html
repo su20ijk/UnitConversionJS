@@ -3,24 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="Site.css" />
+    <link href="bootstrap.js" rel="stylesheet" />
     <title>Number Convertion</title>
 </head>
 <body>
     <div>
-        <div class="header">
+        <div class="header darkBlue">
                 Base Convertion
         </div>
     </div>
     <div id="app">
-        <center>
             <br />
             <p> Number in base<input v-model="baseStart" /> to base<input v-model="baseEnd" /></p>
             <p>Your number: </p>
             <input v-model="numberStart" />
-            <button v-on:click="baseConvertion">Convert</button>
-            <button v-on:click="reset">Reset</button>
+            <button v-on:click="baseConvertion" class="buttonB medBlue" >Convert</button>
+            <button v-on:click="reset" class="buttonB medBlue">Reset</button>
             <p><span v-if="seen"> your number will be: {{numberEnd}}</span></p>
-        </center>
     </div>
 </body>
 </html>

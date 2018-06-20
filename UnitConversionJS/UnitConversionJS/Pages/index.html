@@ -2,11 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>First Page</title>
+        <title>Unit Converter: Feet to Miles</title>
     </head>
     <body>
         <div id="app">
-            <!--This is where you build your application-->
+            <p>Feet</p>
+            <input v-model="Feet" v-on:change="buttonClicked"/> {{Milesconvert}}
+            <p>Miles</p>
+            <input v-model="Miles" v-on:change="buttonClicked"/> {{Feetconvert}}
         </div>
     </body>
 </html>
@@ -15,10 +18,20 @@
     var app = new Vue({
         el: '#app',
         data: {
-            //Enter in data fields that is used in the application here
+            Feet: "",
+            Miles: "",
+            Feetconvert: "",
+            Milesconvert: ""
         },
         methods: {
-            //Enter any methods used in the application here
+            buttonClicked: function () {
+                if (this.Feet != "") {
+                    this.Milesconvert = parseInt(this.Feet) / 5280;
+                }
+                else {
+                    this.Feetconvert = parseInt(this.Miles) * 5280;
+                }
+            }
         }
     })
 </script>

@@ -7,10 +7,9 @@
     <body>
         <div id="app">
             <p>Feet</p>
-            <input v-model="Feet" v-on:change=""/>
+            <input v-model="Feet" v-on:change="buttonClicked"/> {{Milesconvert}}
             <p>Miles</p>
-            <input v-model="Miles" v-on:change=""/>
-            <button v-if:click="buttonClicked">Convert!</button>
+            <input v-model="Miles" v-on:change="buttonClicked"/> {{Feetconvert}}
         </div>
     </body>
 </html>
@@ -20,15 +19,17 @@
         el: '#app',
         data: {
             Feet: "",
-            Miles: ""
+            Miles: "",
+            Feetconvert: "",
+            Milesconvert: ""
         },
         methods: {
             buttonClicked: function () {
                 if (this.Feet != "") {
-                    this.Miles = parseInt(this.Feet) / 5280;
+                    this.Milesconvert = parseInt(this.Feet) / 5280;
                 }
                 else {
-                    this.Feet = parseInt(this.Miles) * 5280;
+                    this.Feetconvert = parseInt(this.Miles) * 5280;
                 }
             }
         }

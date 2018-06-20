@@ -3,9 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <title>Celsius to Fahrenheit Conersion</title>
+    <style>
+        p {
+            font-family: Georgia;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
+        <h1>Celsius to Fahrenheit Converter</h1>
         <p>Celsius: <input v-model="inputTemp" /></p>
         <button v-on:click="convert">Convert</button>
         <p>Fahrenheit: {{outputTemp}}</p>

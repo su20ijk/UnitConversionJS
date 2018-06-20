@@ -2,11 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Fahrenheit to Celsius Conersion</title>
+    <title>Celsius to Fahrenheit Conersion</title>
 </head>
 <body>
     <div id="app">
-        <!--This is where you build your application-->
+        <p>Celsius: <input v-model="inputTemp" /></p>
+        <button v-on:click="convert">Convert</button>
+        <p>Fahrenheit: {{outputTemp}}</p>
     </div>
 </body>
 </html>
@@ -15,10 +17,13 @@
     var app = new Vue({
         el: '#app',
         data: {
-            //Enter in data fields that is used in the application here
+            inputTemp: "",
+            outputTemp: "",
         },
         methods: {
-            //Enter any methods used in the application here
+            convert: function () {
+                this.outputTemp = parseFloat(this.inputTemp) * (9 / 5) + 32;
+            }
         }
     })
 </script>

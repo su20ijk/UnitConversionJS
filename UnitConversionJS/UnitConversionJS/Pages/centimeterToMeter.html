@@ -6,12 +6,13 @@
     <link rel="stylesheet" type="text/css" href="Site.css" />
 </head>
 <body>
-    <div class="header">Centimeter to Meter Converter</div>
+    <div class="header darkBlue">Centimeter to Meter Converter</div>
     <div id="bin">
         <p class="unit">Centimeters</p>
-        <input v-model="centimeter" />
-        <button v-on:click="buttonClicked" class="buttonB">Convert</button>
-        <p>{{meters}} Meters</p>
+        <input v-model="centimeter" class="input"/>
+        <button v-on:click="buttonClicked" class="buttonB medBlue">Convert</button>
+        <p>Meters</p>
+        <p class="output">{{meters}}</p>
     </div>
 </body>
 </html>

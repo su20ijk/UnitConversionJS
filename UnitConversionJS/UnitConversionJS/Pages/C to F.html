@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Celsius to Fahrenheit Conersion</title>
+        <link rel="stylesheet" type="text/css" href="Site.css" />
+    </head>
+<body>
+    <div id="app">
+        <h1 class="header darkBlue">Celsius to Fahrenheit Converter </h1>
+        <p class="body input">Celsius: <input v-model="inputTemp" /> Fahrenheit: {{outputTemp}}</p>
+        <button v-on:click="convert" class="buttonB medBlue">Convert</button>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            inputTemp: "",
+            outputTemp: "",
+        },
+        methods: {
+            convert: function () {
+                this.outputTemp = parseFloat(this.inputTemp) * (9 / 5) + 32;
+            }
+        }
+    })
+</script>

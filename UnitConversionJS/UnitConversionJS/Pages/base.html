@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Site.css" />
+    <title>Number Convertion</title>
+</head>
+<body>
+    <div>
+        <h1 class="header">
+                Base Convertion
+        </h1>
+    </div>
+    <div id="app">
+        <center>
+            <br />
+            <p> Number in base<input v-model="baseStart" /> to base<input v-model="baseEnd" /></p>
+            <p>Your number: </p>
+            <input v-model="numberStart" />
+            <button v-on:click="baseConvertion">Convert</button>
+            <button v-on:click="reset">Reset</button>
+            <p><span v-if="seen"> your number will be: {{numberEnd}}</span></p>
+        </center>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            baseStart: "",
+            baseEnd: "",
+            numberStart: "",
+            numberEnd: "",
+            seen: false
+        },
+        methods: {
+            baseConvertion: function () {
+                this.seen = true;
+                this.numberEnd = parseInt(this.numberStart, this.baseStart).toString(parseInt(this.baseEnd));
+            },
+            reset: function () {
+                this.baseStart = "";
+                this.baseEnd = "";
+                this.numberStart = "";
+                this.numberEnd = "";
+                this.seen = false;
+            }
+        }
+    })
+</script>

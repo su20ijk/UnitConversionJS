@@ -15,10 +15,13 @@
     var app = new Vue({
         el: '#app',
         data: {
-            //Enter in data fields that is used in the application here
+            feet: "",
+            inches: ""
         },
         methods: {
-            //Enter any methods used in the application here
+            feetinches: function () {
+                this.inches = this.feet * 12;
+            }
         }
     })
 </script>

@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: Georgia;
 }
 .buttonB:hover {
     background-color: #42a5f5;
@@ -13,7 +14,7 @@
 .buttonB {
     transition: .25s ease-in-out;
     border-radius: 4px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Georgia;
     font-size: 16px;
     border: 1px solid #42a5f5;
     color: #42a5f5;
@@ -29,6 +30,6 @@
 .header {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 24px;
-    color: #333745;
+    color: #0844a4;
     letter-spacing: 2px;
 }

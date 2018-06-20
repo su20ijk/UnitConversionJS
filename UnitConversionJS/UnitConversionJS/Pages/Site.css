@@ -33,10 +33,11 @@
 }
 .header {
     
-    font-size: 24px;
-    color: #333745;
+    font-size: 60px;
+    color:#e3f2fd;
     letter-spacing: 2px;
-    background-color: #e3f2fd;
-    height: 200px;
+    background-color: #333745;
+    height: 100px;
     text-align: center;
+    line-height: 100px;
 }

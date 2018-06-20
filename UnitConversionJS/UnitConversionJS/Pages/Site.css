@@ -42,6 +42,16 @@
     height: 32px;
     text-align: center;
 }
+.output {
+    font-family: 'Georgia', sans-serif;
+    font-size: 16px;
+    width: 160px;
+    height: 32px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 32px;
+}
 .darkBlue {
     color: #0844a4;
 }

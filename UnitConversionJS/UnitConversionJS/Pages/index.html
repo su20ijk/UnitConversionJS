@@ -2,11 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>First Page</title>
+        <title>Feet-Inches</title>
     </head>
     <body>
         <div id="app">
-            <!--This is where you build your application-->
+            <p>Feet:</p>
+            <input v-model="feet" v-on:input ="feetInches"/>
+            <p>Inches: {{ inches }}</p>
         </div>
     </body>
 </html>
@@ -19,7 +21,7 @@
             inches: ""
         },
         methods: {
-            feetinches: function () {
+            feetInches: function () {
                 this.inches = this.feet * 12;
             }
         }

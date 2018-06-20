@@ -7,10 +7,9 @@
     </head>
 <body>
     <div id="app">
-        <h1 class="header">Celsius to Fahrenheit Converter</h1>
-        <p class="body">Celsius: <input v-model="inputTemp" /></p>
+        <h1 class="header">Celsius to Fahrenheit Converter </h1>
+        <p class="body">Celsius: <input v-model="inputTemp" /> Fahrenheit: {{outputTemp}}</p>
         <button v-on:click="convert" class="buttonB">Convert</button>
-        <p class="body">Fahrenheit: {{outputTemp}}</p>
     </div>
 </body>
 </html>

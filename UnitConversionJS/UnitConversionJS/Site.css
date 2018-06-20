@@ -1,0 +1,28 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.buttonB:hover {
+    background-color: #42a5f5;
+    color: white;
+    width: 120px;
+    height: 40px;
+    outline: none;
+    transition: .25s ease-in-out;
+}
+.buttonB {
+    transition: .25s ease-in-out;
+    border-radius: 4px;
+    font-family: "Georgia", sans-serif;
+    font-size: 16px;
+    border: 1px solid #42a5f5;
+    color: #42a5f5;
+    background-color: white;
+    width: 120px;
+    height: 40px;
+    outline: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer !important;
+}

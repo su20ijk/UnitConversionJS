@@ -1,13 +1,16 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Feet-Inches</title>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <title>Feet-Inches</title>
+    <link rel="stylesheet" type="text/css" href="Site.css" />
+</head>
     <body>
         <div id="app">
+            <h1 class="header">Feet to Inches</h1>
             <p>Feet:</p>
-            <input v-model="feet" v-on:input ="feetInches"/>
+            <input v-model="feet" v-on:change ="feetInches"/>
+            <button v-on:click="feetInches" class="buttonB">Convert</button>
             <p>Inches: {{ inches }}</p>
         </div>
     </body>

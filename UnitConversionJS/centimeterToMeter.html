@@ -2,9 +2,30 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>cm to m</title>
 </head>
 <body>
-
+    <div class="header">Centimeter to Meter Converter</div>
+    <div id="bin">
+        <p class="unit">Centimeter</p>
+        <input v-model="centimeter" />
+        <button v-on:click="buttonClicked">Convert</button>
+        <p>{{meters}} meters</p>
+    </div>
 </body>
 </html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#bin',
+        data: {
+            centimeter: "",
+            meters: ""
+        },
+        methods: {
+            buttonClicked: function () {
+                this.meters = this.centimeter / 100;
+            }
+        }
+    })
+</script>

@@ -25,16 +25,16 @@
                     <input v-model="feet" class="input lineBoarder" type="number" />
                 </div>
             </div>
-        </div>
-        <div class=" offset-4 col-2 bgBlue shadow-lg p-3 mb-5 rounded">
-            <div class="col-6">
-                <label for="Number of inches">Inches:</label>
-                <div class="output lineBoarder">
-                    <p>{{ inches }}</p>
+
+            <div class=" offset-4 col-2 bgBlue shadow-lg p-3 mb-5 rounded">
+                <div class="col-6">
+                    <label for="Number of inches">Inches:</label>
+                    <div class="output lineBoarder">
+                        <p>{{ inches }}</p>
+                    </div>
                 </div>
             </div>
         </div>
-        
         <div class="centerize">
             <button v-on:click="feetInches" class="buttonB medBlue">Convert</button>
         </div>

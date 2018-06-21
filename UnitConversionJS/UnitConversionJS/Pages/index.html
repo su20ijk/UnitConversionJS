@@ -1,17 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Unit Converter: Feet to Miles</title>
-    </head>
-    <body>
-        <div id="app">
-            <p>Feet</p>
-            <input v-model="Feet" v-on:change="buttonClicked"/> {{Milesconvert}}
-            <p>Miles</p>
-            <input v-model="Miles" v-on:change="buttonClicked"/> {{Feetconvert}}
-        </div>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Site.css" />
+    <title>Unit Converter: Feet to Miles</title>
+</head>
+<body >
+    <div class="topnav">
+        <a href="index.html">Feet to Meters</a>
+        <a href="C to F.html">Celsius to Fahrenheit</a>
+        <a href="feetInches.html">Feet to Inches</a>
+        <a href="base.html">Base to Base</a>
+        <a href="centimeterToMeter.html">Centimeter to Meter</a>
+    </div>
+    <div id="app">
+        <p>Feet</p>
+        <input v-model="Feet" v-on:change="buttonClicked" /> {{Milesconvert}}
+        <p>Miles</p>
+        <input v-model="Miles" v-on:change="buttonClicked" /> {{Feetconvert}}
+    </div>
+</body>
 </html>
 <script src="https://unpkg.com/vue"></script>
 <script>

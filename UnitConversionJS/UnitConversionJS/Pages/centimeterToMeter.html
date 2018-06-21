@@ -18,17 +18,20 @@
     <br />
     <div id="bin">
         <div class="row">
-            <div class="offset-3 col-2 bgBlue">
+            <div class="offset-3 col-2 bgBlue shadow-lg p-3 mb-5 rounded">
                 <p class="unit">Centimeters</p>
-                <input v-model="centimeter" class="input" />
+                <input v-model="centimeter" class="input lineBoarder" />
             </div>
-            <div class="offset-2 col-2 bgBlue">
+            <div class="offset-2 col-2 bgBlue shadow-lg p-3 mb-5 rounded">
                 <p>Meters</p>
                 <p class="output lineBoarder">{{meters}}</p>
             </div>
         </div>
         <br />
-        <button v-on:click="buttonClicked" class="buttonB medBlue centerize">Convert</button>
+        <div class="centerize">
+            <button v-on:click="buttonClicked" class="buttonB medBlue centerize">Convert</button>
+        </div>
+        
     </div>
 </body>
 </html>

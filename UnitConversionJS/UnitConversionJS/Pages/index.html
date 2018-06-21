@@ -4,20 +4,54 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="Site.css" />
     <title>Unit Converter: Feet to Miles</title>
+    <link rel="stylesheet" type="text/css" href="Site.css" />
+    <link href="bootstrap.css" type="text/css" rel="stylesheet" />
 </head>
-<body >
+<body>
     <div class="topnav">
-        <a href="index.html">Feet to Meters</a>
+        <a href="index.html">Feet to Miles</a>
         <a href="C to F.html">Celsius to Fahrenheit</a>
         <a href="feetInches.html">Feet to Inches</a>
         <a href="base.html">Base to Base</a>
         <a href="centimeterToMeter.html">Centimeter to Meter</a>
     </div>
+    <div class="header darkBlue">
+        Feet to Miles Convertion
+    </div>
     <div id="app">
-        <p>Feet</p>
-        <input v-model="Feet" v-on:change="buttonClicked" /> {{Milesconvert}}
-        <p>Miles</p>
-        <input v-model="Miles" v-on:change="buttonClicked" /> {{Feetconvert}}
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="offset-3 col-2 bgBlue">
+                    <div class="row">
+                        <div class="col-6">
+                            <p> Feet:<div><input v-model="Feet" class="input lineBoarder" type="number" v-on:change="" /></div></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Miles:   <div class="output lineBoarder" />{{Milesconvert}}</div></p>
+                        </div>
+                    </div>
+                </div>
+            <div class="offset-2 col-2 bgBlue">
+                <div class="row">
+                    <div class="col-6">
+                        <p>Miles:<div><input v-model="Miles" class="input lineBoarder" type="number" v-on:change="" /></div></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p>Feet: <div class="output lineBoarder">{{Feetconvert}}</div></p>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="centerize">
+            <br />
+            <button v-on:click="buttonClicked" class="buttonB medBlue">Convert</button>
+        </div>
     </div>
 </body>
 </html>
@@ -36,7 +70,7 @@
                 if (this.Feet != "") {
                     this.Milesconvert = parseInt(this.Feet) / 5280;
                 }
-                else {
+                if (this.Miles != "") {
                     this.Feetconvert = parseInt(this.Miles) * 5280;
                 }
             }

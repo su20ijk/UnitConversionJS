@@ -19,22 +19,37 @@
         <br />
         <div class="container">
             <div class="row">
-                <div class="offset-3 col-2 bgBlue">
+                <div class="offset-3 col-2 bgBlue shadow-lg p-3 mb-5 rounded">
                     <div class="row">
                         <div class="col-6">
-                            <p> Celsius:<div><input v-model="inputTemp" class="input lineBoarder" type="number" /></div></p>
+                            <p> Celsius:<div><input v-model="inputC" class="input lineBoarder" type="number" /></div></p>
                         </div>
                     </div>
-                </div>
-                <div class=" offset-2 col-2 bgBlue">
                     <div class="row">
                         <div class="col-6">
-                            <p>Fahrenheit: <div class="output lineBoarder">{{outputTemp}}</div></p>
+                            <p>Fahrenheit: <div class="output lineBoarder">{{outputF}}</div></p>
                         </div>
+                    </div>
+                    <div class="centerize">
+                        <button v-on:click="cToF" class="buttonB medBlue">Convert</button>
+                    </div>
+                </div>
+                <div class=" offset-2 col-2 bgBlue shadow-lg p-3 mb-5 rounded">
+                    <div class="row">
+                        <div class="col-6">
+                            <p> Fahrenheit:<div><input v-model="inputF" class="input lineBoarder" type="number" /></div></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Celsius: <div class="output lineBoarder">{{outputC}}</div></p>
+                        </div>
+                    </div>
+                    <div class="centerize">
+                        <button v-on:click="fToC" class="buttonB medBlue">Convert</button>
                     </div>
                 </div>
             </div>
-            <button v-on:click="convert" class="buttonB centerize">Convert</button>
         </div>
     </div>
 </body>
@@ -44,12 +59,17 @@
     var app = new Vue({
         el: '#app',
         data: {
-            inputTemp: "",
-            outputTemp: "",
+            inputC: "",
+            outputF: "",
+            inputF: "",
+            outputC: ""
         },
         methods: {
-            convert: function () {
-                this.outputTemp = parseFloat(this.inputTemp) * (9 / 5) + 32;
+            cToF: function () {
+                this.outputF = parseFloat(this.inputC) * (9 / 5) + 32;
+            },
+            fToC: function () {
+                this.outputC = (parseFloat(this.inputF)-32) * (5 / 9);
             }
         }
     })

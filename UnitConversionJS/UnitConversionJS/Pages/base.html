@@ -2,24 +2,57 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="Site.css" />
-    <link href="bootstrap.js" rel="stylesheet" />
     <title>Number Convertion</title>
+    <link rel="stylesheet" type="text/css" href="Site.css" />
+    <link href="bootstrap.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-    <div>
-        <div class="header darkBlue">
-                Base Convertion
-        </div>
+    <div class="topnav">
+        <a href="index.html">Feet to Meters</a>
+        <a href="C to F.html">Celsius to Fahrenheit</a>
+        <a href="feetInches.html">Feet to Inches</a>
+        <a href="base.html">Base to Base</a>
+        <a href="centimeterToMeter.html">Centimeter to Meter</a>
+    </div>
+    <div class="header darkBlue">
+        Base Convertion
     </div>
     <div id="app">
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="offset-3 col-2 bgBlue">
+                    <div class="row">
+                        <div class="col-6">
+                        <p> Base:<div><input v-model="baseStart" class="input lineBoarder" type="number"/></div></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Number:   <div><input v-model="numberStart" class="input lineBoarder" type="number"/></div></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" offset-2 col-2 bgBlue">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>to base:<div><input v-model="baseEnd" class="input lineBoarder" type="number"/></div></p>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Result: <div class="output lineBoarder">{{numberEnd}}</div></p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="centerize">
             <br />
-            <p> Number in base<input v-model="baseStart" /> to base<input v-model="baseEnd" /></p>
-            <p>Your number: </p>
-            <input v-model="numberStart" />
-            <button v-on:click="baseConvertion" class="buttonB medBlue" >Convert</button>
-            <button v-on:click="reset" class="buttonB medBlue">Reset</button>
-            <p><span v-if="seen"> your number will be: {{numberEnd}}</span></p>
+        <button v-on:click="baseConvertion" class="buttonB medBlue">Convert</button>
+        <button v-on:click="reset" class="buttonB medBlue">Reset</button>
+        </div>
     </div>
 </body>
 </html>

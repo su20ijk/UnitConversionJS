@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>cm to m</title>
     <link rel="stylesheet" type="text/css" href="Site.css" />
+    <link href="bootstrap.css" rel="stylesheet" />
 </head>
 <body>
     <div class="topnav">
@@ -14,12 +15,20 @@
         <a href="centimeterToMeter.html">Centimeter to Meter</a>
     </div>
     <div class="header darkBlue">Centimeter to Meter Converter</div>
+    <br />
     <div id="bin">
-        <p class="unit">Centimeters</p>
-        <input v-model="centimeter" class="input" />
-        <button v-on:click="buttonClicked" class="buttonB medBlue">Convert</button>
-        <p>Meters</p>
-        <p class="output">{{meters}}</p>
+        <div class="row">
+            <div class="offset-3 col-2 bgBlue">
+                <p class="unit">Centimeters</p>
+                <input v-model="centimeter" class="input" />
+            </div>
+            <div class="offset-2 col-2 bgBlue">
+                <p>Meters</p>
+                <p class="output lineBoarder">{{meters}}</p>
+            </div>
+        </div>
+        <br />
+        <button v-on:click="buttonClicked" class="buttonB medBlue centerize">Convert</button>
     </div>
 </body>
 </html>
